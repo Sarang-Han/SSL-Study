@@ -1,0 +1,24 @@
+#!/bin/bash
+
+corrcount=0;
+total=0;
+
+for i in `cat $1` #$1 인자로 txt파일 읽어들이기
+do
+    echo $i #echo로 한 문장씩 출력하기
+    read -e input #read -e 커맨드 사용하여 파일 내용 한 문장씩 읽어서 변수에 저장하기
+
+    if [ $input = $i ] #키보드로 한 문장씩 입력받고 주어진 내용과 똑같이 타이핑 되었는지 비교하기
+    then 
+        echo "정답" 
+        ((corrcount++))
+
+    else 
+        echo "땡"
+    fi
+
+    ((total++))
+
+done
+
+echo "당신은 총 $total 문제 중 $corrcount 문제를 맞추셨습니다."
