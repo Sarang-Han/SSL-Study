@@ -1,0 +1,16 @@
+
+반복문 for
+for 변수 in `변수`
+do 명령
+done
+
+ex)
+for a in `cat FILE`
+do 명령
+done
+
+조건문 if
+if
+then
+else
+fi

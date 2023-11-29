@@ -11,7 +11,7 @@ do
     if [ $input = $i ] #키보드로 한 문장씩 입력받고 주어진 내용과 똑같이 타이핑 되었는지 비교하기
     then 
         echo "정답" 
-        ((corrcount++))
+        ((corrcount++)) #let corrcount=$corrcount+1
 
     else 
         echo "땡"

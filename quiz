@@ -1,0 +1,34 @@
+#!/bin/bash
+
+line=0;
+
+for i in `cat $1`
+do
+    
+    let line=$line+1
+
+    if ((line % 2 == 1))
+    then
+        
+        echo $i
+        read -e input
+    
+    else
+        
+        if [ $input = $i ]
+        then
+            
+            echo "정답(O)"
+            let corrcount=$corrcount+1
+        
+        else
+            
+            echo "땡(X)"
+        
+        fi
+    fi
+done
+
+let total=$line/2
+
+echo "당신은 총 $total 문제 중 $corrcount 문제를 맞추셨습니다."
