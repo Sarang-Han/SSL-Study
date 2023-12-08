@@ -1,0 +1,4 @@
+#!/bin/bash
+
+sort -n $1 > sorted_num.txt
+# sort -rn $1 > sorted_num.txt 내림차순 정렬
