@@ -1,0 +1,11 @@
+#!/bin/bash
+
+count=0
+for A in `cat data_file`
+do
+    let M=$count%2
+    if [ $M -eq 0 ]
+    then echo $A
+    fi
+    let count=$count+1
+done
