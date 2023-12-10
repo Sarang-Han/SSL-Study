@@ -1,0 +1,6 @@
+#!/bin/bash
+
+for A in $#
+do
+    ./a.out $A # ./a.out 3
+done

@@ -1,0 +1,8 @@
+A=1
+while [ $A -le 3 ]
+do
+    mkdir $A
+    echo $A >> A
+    echo $A > $A/flie
+    let A=$A+1
+done
